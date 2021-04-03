@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+//Colors:
+$primaryColor: #66fcf1;
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: bold;
+}
+
+main {
+  max-width: 40vw;
+  min-width: 180px;
+  margin: auto;
+  padding-top: 5vh;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+button.btn-outline-primary {
+  color: white !important;
+  border-color: $primaryColor !important;
+}
+
+button.btn-outline-secondary {
+  color: white !important;
+  border-color: $primaryColor !important;
+}
+
+p title strong h1 h2 h3 h4,
+.primary {
+  color: $primaryColor !important;
+}
+
+hr.primary {
+  border-color: $primaryColor;
+}

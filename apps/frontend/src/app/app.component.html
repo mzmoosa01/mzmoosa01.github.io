@@ -1,6 +1,40 @@
+<!-- Main -->
 <main>
-  <h1>Full stack software developer</h1>
-  <br />
+  <mdb-navbar
+    SideClass="navbar navbar-expand-lg navbar-dark black ie-nav"
+    [containerInside]="false"
+  >
+    <mdb-navbar-brand>
+      <a class="logo navbar-brand" href="#"
+        ><strong class="primary">Zubair Moosa</strong></a
+      >
+    </mdb-navbar-brand>
+    <links>
+      <!-- <ul class="navbar-nav mr-auto">
+      <li class="nav-item active waves-light" mdbWavesEffect>
+        <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link">Features</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link">Pricing</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link">Opinions</a>
+      </li>
+    </ul> -->
+      <ul class="navbar-nav nav-flex-icons ml-auto">
+        <li class="nav-item waves-light float-right" mdbWavesEffect>
+          <a class="nav-link"><mdb-icon fab icon="github"></mdb-icon></a>
+        </li>
+        <li class="nav-item waves-light float-right" mdbWavesEffect>
+          <a class="nav-link"><mdb-icon fab icon="linkedin"></mdb-icon></a>
+        </li>
+      </ul>
+    </links>
+  </mdb-navbar>
   <hero-component></hero-component>
   <br />
+  <technology-template-component></technology-template-component>
 </main>

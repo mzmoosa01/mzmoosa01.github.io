@@ -5,7 +5,8 @@
     "types": []
   },
   "angularCompilerOptions": {
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictInputTypes": false
   },
   "files": ["src/main.ts", "src/polyfills.ts"]
 }
