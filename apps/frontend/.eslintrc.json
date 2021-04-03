@@ -22,7 +22,6 @@
           "error",
           {
             "type": "element",
-            "prefix": "zubairmoosa-website",
             "style": "kebab-case"
           }
         ]
