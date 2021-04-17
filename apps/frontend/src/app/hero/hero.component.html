@@ -9,10 +9,11 @@
 <!-- <h4 class="typewriter text-center">I'm Zubair and I love to code!</h4> -->
 <div class="container">
   <div class="d-inline-flex p-2 bd-highlight subheading-container">
-    <h2>
+    <!-- <h2 class="typewriter">
       I design, code and deploy reliable scalable and maintainable software
       solutions
-    </h2>
+    </h2> -->
+    <h2 id="demo" class=""></h2>
   </div>
   <hr class="primary" />
   <br />
@@ -23,6 +24,7 @@
     class="float-right text-left"
     mdbBtn
     mdbWavesEffect
+    (click)="scrollToElement('technologieComp')"
   >
     <strong>
       <h5>
@@ -51,6 +53,11 @@
     ></strong>
   </button>
 </div>
+
+<br />
+<technology-template-component
+  id="technologieComp"
+></technology-template-component>
 
 <!-- <svg
     width="93"
