@@ -34,7 +34,7 @@ export class TechnologyTemplateComponent {
       imageSrc: '../../assets/images/Nx.png',
       isRectangular: true,
     },
-    { name: 'Node JS', imageSrc: '../../assets/images/angular.png' },
+    { name: 'Node JS', imageSrc: '../../assets/images/NodeJS.png' },
   ];
 
   databaseCircularImages: IcircularImage[] = [
