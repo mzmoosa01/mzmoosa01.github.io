@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-between flex-wrap">
+  <div class="item-group" *ngFor="let image of model; let index = i">
+    <div
+      class="image-circular-crop"
+      *ngIf="!image.isRectangular; else rectangularImage"
+    >
+      <img src="{{ image.imageSrc }}" alt="Angular" />
+    </div>
+    <ng-template #rectangularImage>
+      <div class="image-rectangular">
+        <img src="{{ image.imageSrc }}" alt="Angular" />
+      </div>
+    </ng-template>
+    <p class="image-caption text-center">{{ image.name }}</p>
+  </div>
+</div>
