@@ -16,7 +16,7 @@ export class HeroComponent implements OnInit {
 
   typing = () => {
     const txt =
-      'I design, code and deploy reliable scalable and maintainable software solutions'; /* The text */
+      'I design, code and deploy reliable, scalable and maintainable software solutions'; /* The text */
     const speed = 50; /* The speed/duration of the effect in milliseconds */
 
     // for (let j = 0; j < txt.length; j++) {
