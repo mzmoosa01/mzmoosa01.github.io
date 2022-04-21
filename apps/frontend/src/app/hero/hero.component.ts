@@ -7,7 +7,7 @@ import { TechnologyTemplateComponent } from '../technology-template/technology-t
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
-  i = 0;
+  private index = 0;
   //@ViewChild(TechnologyTemplateComponent) technologiesComp;
 
   ngOnInit(): void {
@@ -19,13 +19,9 @@ export class HeroComponent implements OnInit {
       'I design, code and deploy reliable, scalable and maintainable software solutions'; /* The text */
     const speed = 50; /* The speed/duration of the effect in milliseconds */
 
-    // for (let j = 0; j < txt.length; j++) {
-    //   setTimeout(() => this.typeLetter(txt.charAt(j), 'demo'), speed);
-    // }
-
-    if (this.i < txt.length) {
-      document.getElementById('demo').innerHTML += txt.charAt(this.i);
-      this.i++;
+    if (this.index < txt.length) {
+      document.getElementById('demo').innerHTML += txt.charAt(this.index);
+      this.index++;
       setTimeout(this.typing, speed);
     }
   };
