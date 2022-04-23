@@ -14,7 +14,7 @@ export class ExperianceComponent {
       title: 'frontend software engineer - angular', 
       subtitle: 'Crossover for work (Nov 2021 - Present day)',
       dateRange: '2021 - Present',
-      description: 'Part of a globally distributed team of angular specialists. I was responsible for maintaining and creating web applications mostly built in angular 10+ but also worked with other technologies such as Salesforce and AWS.'
+      description: 'Part of a globally distributed team of remote angular specialists. I was responsible for maintaining and creating web applications mostly built in angular 10+ but also worked with other technologies such as Salesforce and AWS.'
     },
     {
       title: 'Full stack software engineer', 
