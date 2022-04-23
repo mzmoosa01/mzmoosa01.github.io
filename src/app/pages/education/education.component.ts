@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderData } from 'src/app/models/header-data.model';
 import { TimelineData } from 'src/app/models/timeline-data.model';
 
 @Component({
@@ -23,4 +24,10 @@ export class EducationComponent {
       description: 'The informatics degree focused on all aspects of the SDLC. I was trained to see the entire picture when designing, building or testing software. I graduated cum laude and top of my class.'
     }
   ]
+
+  public headerData: HeaderData = {
+    title: 'Education',
+    icon: 'school',
+    description: '"Education is the passport of the future, for tomorrow belongs to those who prepare for it today" - Malcom X'
+  }
 }

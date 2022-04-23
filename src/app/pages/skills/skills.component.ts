@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderData } from 'src/app/models/header-data.model';
 import { SkillCategory } from 'src/app/models/skill-data.model';
 
 @Component({
@@ -88,5 +89,10 @@ export class SkillsComponent {
         }
       ]
     }
-  ]
+  ];
+  public headerData: HeaderData = {
+    title: 'Skills',
+    icon: 'build',
+    description: `“Learning how to learn is life's most important skill.” - Tony Buzan`
+  }
 }

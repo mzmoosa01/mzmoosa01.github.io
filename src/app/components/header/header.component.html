@@ -1,0 +1,17 @@
+<div
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  class="content-header bg-primary p-5"
+>
+  <img
+    *ngIf="data.image"
+    [src]="data.image"
+    alt="profile picture"
+    class="mb-2"
+  />
+  <mat-icon *ngIf="data.icon" class="mat-icon-xlg">{{ data.icon }}</mat-icon>
+  <h1 *ngIf="data.title">{{ data.title }}</h1>
+  <h4 *ngIf="data.description" class="lighter-color mt-2 italic">
+    {{ data.description }}
+  </h4>
+</div>

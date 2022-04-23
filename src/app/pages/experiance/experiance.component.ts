@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderData } from 'src/app/models/header-data.model';
 import { TimelineData } from 'src/app/models/timeline-data.model';
 
 @Component({
@@ -27,5 +28,12 @@ export class ExperianceComponent {
       dateRange: '2019-2020',
       description: 'I began my career teaching programming to younger students. I was part of the team that re-developed the course syllabus to a more web programming focus and I was responsible for creating and administering first year practical work.'
     }
-  ]
+  ];
+
+  public headerData: HeaderData = {
+    title: 'Experience',
+    icon: 'touch_app',
+    description: '"Experience is the teacher of all things" - Julius Caesar'
+  }
 }
+
