@@ -1,0 +1,88 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import "variables";
+@mixin theme-reset($theme) {
+    $color-config:  mat.get-color-config($theme);
+    $primary:       map.get($color-config, 'primary');
+    $accent:        map.get($color-config, 'accent');
+    $warn:          map.get($color-config, 'warn'); 
+    $foreground:    map.get($color-config, 'foreground');
+    $background:    map.get($color-config, 'background');
+
+    .bg-primary { 
+        background: mat.get-color-from-palette($primary);
+        color: mat.get-color-from-palette($primary, default-contrast);
+    }
+    .bg-accent {
+        background: mat.get-color-from-palette($accent);
+        color: mat.get-color-from-palette($accent, default-contrast);
+    }
+    .bg-warn {
+        background: mat.get-color-from-palette($warn);
+        color: mat.get-color-from-palette($warn, default-contrast);
+    }
+    .primary-color{
+        color: mat.get-color-from-palette($primary);
+    }
+    .accent-color{
+        color: mat.get-color-from-palette($accent);
+    }
+    .secondary-text-color{
+        color: mat.get-color-from-palette($foreground, secondary-text);
+    }
+    .social-icon{
+        color: mat.get-color-from-palette($accent, 300);
+        &:hover{
+           color: mat.get-color-from-palette($accent, 700); 
+        }
+    }
+    .horizontal-menu{
+        background: mat.get-color-from-palette($primary, darker) !important;
+        .menu-item{
+            color: mat.get-color-from-palette($primary, lighter);
+        }
+    }
+    .service-item:hover{
+        .mat-icon{
+            color: mat.get-color-from-palette($primary) !important;
+        }
+    } 
+    .active-link{
+        background-color: mat.get-color-from-palette($primary); 
+        color: #fff;
+    }
+    .lighter-color{
+        color: mat.get-color-from-palette($primary, lighter);
+    }
+    .content-header img{
+        border: 3px solid mat.get-color-from-palette($primary, darker);
+    }
+    .timeline-container{
+        .timeline-content{
+            border-top: 4px solid mat.get-color-from-palette($accent);
+            &.first{
+                border-top: 4px solid mat.get-color-from-palette($primary);
+            }
+        }
+        &::before{
+            background: mat.get-color-from-palette($foreground, divider);
+        }
+    }
+    .testimonials.swiper-container .item, 
+    .statistics .item,
+    .pricing-card {
+        border-top: 4px solid mat.get-color-from-palette($accent);        
+    }
+    .interests{
+        border-top: 4px solid mat.get-color-from-palette($primary); 
+    }
+    .ps__thumb-y{
+        background-color: mat.get-color-from-palette($primary);
+    }
+    .swiper-pagination.white .swiper-pagination-bullet{
+        background: mat.get-color-from-palette($accent);
+    }  
+    .footer{
+        border-top: 1px solid mat.get-color-from-palette($foreground, divider);
+    }  
+}

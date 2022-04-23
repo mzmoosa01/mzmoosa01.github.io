@@ -1,4 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+    font-family: 'Astera';
+    src: url('./assets/fonts/astera.eot');
+    src: url('./assets/fonts/astera.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/astera.ttf') format('truetype');
+}
+
+// // @import '~swiper/dist/css/swiper.min.css';
+// @import '~swiper/swiper-bundle.min.css';
+
+@import "app/theme/styles/base";
+@import "app/theme/styles/spaces";
+@import "app/theme/styles/libs-override";
+@import "app/theme/styles/theme";

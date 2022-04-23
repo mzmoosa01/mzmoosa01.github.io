@@ -1,0 +1,5 @@
+$green-dark-primary: mat.define-palette(mat.$green-palette, 800, 100, 900);
+$green-dark-accent: mat.define-palette(mat.$amber-palette, A200, A100, A700);
+$green-dark-warn: mat.define-palette(mat.$red-palette, A200);
+
+$green-dark-theme: mat.define-dark-theme($green-dark-primary, $green-dark-accent, $green-dark-warn);

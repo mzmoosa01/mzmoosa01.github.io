@@ -1,0 +1,171 @@
+@import "variables";
+
+html, body{
+    height: 100%;
+}
+body{
+    font-family: $main-font-family;
+    line-height: 1.5;
+    background-color: #303030;
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.container{
+    width: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.w-100{
+    width: 100% !important;
+}
+.mw-100{
+    max-width: 100%;
+}
+.h-100{
+  height: 100%;
+}
+.transition{
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    transition: 0.2s;
+}
+.text-center{
+  text-align: center;
+}
+
+.mat-icon-button .mat-icon.mat-icon-xs,
+.mat-icon.mat-icon-xs{
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    width: 14px;
+    vertical-align: middle;
+}
+.mat-icon-button .mat-icon.mat-icon-sm,
+.mat-icon.mat-icon-sm{
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+}
+.mat-icon-button .mat-icon.mat-icon-lg,
+.mat-icon.mat-icon-lg{
+    font-size: 36px;
+    line-height: 36px;
+    height: 36px;
+    width: 36px;
+    vertical-align: middle;
+}
+.mat-icon-button .mat-icon.mat-icon-xlg,
+.mat-icon.mat-icon-xlg{
+    font-size: 48px;
+    line-height: 48px;
+    height: 48px;
+    width: 48px;
+    vertical-align: middle;
+}
+
+.pricing-tabs.mat-tab-group .mat-tab-header{
+    width: 320px;
+    margin: 0 auto;
+    border-bottom: none !important;
+    margin-bottom: 16px;
+}
+.pricing-card.mat-card{
+    padding: 0;
+    overflow: hidden;
+    .title{
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .header{
+        min-height: 152px;
+        p.desc, small{
+            font-weight: 300;
+        }
+    }
+    .del{
+        text-decoration:line-through;
+    }
+   
+}
+
+
+/******* Responsive *******/
+// Extra small devices (xs)
+@media screen and (max-width: 599px) { 
+    .pricing-tabs.mat-tab-group .mat-tab-header{
+        width: 210px;
+    }  
+}
+
+// Small devices (sm)
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  
+}
+
+// Medium devices (md)
+@media screen and (min-width: 960px) and (max-width: 1279px) {    
+ 
+}
+
+// Large devices (lg)
+@media screen and (min-width: 1280px) and (max-width: 1919px) { 
+
+}
+
+// Extra large devices (xl)
+@media screen and (min-width: 1920px) and (max-width: 5000px){
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 0px;
+    &:hover{
+        background: #cccccc;
+    }
+    &:active{
+        background: #888888; 
+    }
+}
+::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px none #ffffff;
+    border-radius: 0px;
+    &:hover{
+        background: #666666;
+    }
+    &:active{
+        background: #333333; 
+    }
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
