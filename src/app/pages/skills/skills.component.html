@@ -1,1 +1,54 @@
-<p>skills works!</p>
+<div class="container p-3">
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxFlex="100" fxFlex.gt-md="85" fxFlex.md="90">
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div
+          *ngFor="let skill of skills"
+          fxFlex="100"
+          fxFlex.gt-xs="50"
+          class="p-3"
+        >
+          <mat-card>
+            <h3 class="skill-title">{{ skill.name }} skills</h3>
+            <mat-card-content>
+              <div *ngFor="let item of skill.items" class="py-3">
+                <div
+                  fxLayout="row wrap"
+                  fxLayoutAlign="space-between"
+                  class="secondary-text-color"
+                >
+                  <span>{{ item.name }}</span>
+                  <span>{{ item.value }}% </span>
+                </div>
+                <mat-progress-bar
+                  color="accent"
+                  mode="determinate"
+                  [value]="item.value"
+                ></mat-progress-bar>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <!-- <div fxLayout="row wrap" fxLayoutAlign="center center">
+                <div fxFlex="100" class="p-3">
+                    <mat-card class="interests">
+                        <h3 class="skill-title">My Interests</h3>                        
+                        <div class="text-center" ngClass.gt-sm="px-5">
+                            <p class="secondary-text-color" ngClass.gt-sm="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nostrum voluptas nobis explicabo eveniet temporibus officiis eos dolorum, inventore unde vero aut quae doloribus vel error! Ipsum commodi animi quaerat.</p>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Music">headset</mat-icon>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Traveling">airplanemode_active</mat-icon>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Swimming">pool</mat-icon>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Fitness">fitness_center</mat-icon>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Bicycling">directions_bike</mat-icon>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Photography">local_see</mat-icon>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Gaming">videogame_asset</mat-icon>
+                            <mat-icon class="mat-icon-xlg accent-color mx-3" matTooltip="Painting">brush</mat-icon>
+                        </div>
+                    </mat-card>                    
+                </div>
+            </div> -->
+    </div>
+  </div>
+</div>
