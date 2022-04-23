@@ -11,6 +11,7 @@ import { ExperianceComponent } from './pages/experiance/experiance.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { EducationComponent } from './pages/education/education.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TimelineComponent } from './components/timeline/timeline.component';
     ExperianceComponent,
     SkillsComponent,
     EducationComponent,
-    TimelineComponent
+    TimelineComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
