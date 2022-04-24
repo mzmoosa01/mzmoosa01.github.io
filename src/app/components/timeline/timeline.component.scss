@@ -1,0 +1,66 @@
+.timeline-container{
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    .timeline-block{
+        position: relative;
+        margin-left: 72px;
+        margin-top: 24px;
+        .timeline-date{
+            position: absolute;
+            left: -72px;
+            top: 16px;
+            z-index: 1;
+        }
+        .timeline-content{
+            padding: 1rem 1rem 1rem 2.5rem;
+            min-height: 150px;
+            h3{
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+            p.company{               
+                font-style: italic;
+            }
+        }
+        &:first-child{
+            margin-top: 0;
+        }
+    }    
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20px;
+        height: 100%;
+        width: 4px;   
+    }
+}
+
+@media screen and (min-width: 960px) {    
+    .timeline-container::before{    
+        left: 50%;
+        margin-left: -2px;
+    }
+    .timeline-container{
+        .timeline-block{
+            margin: 0;
+            margin-top: -70px;
+            .timeline-date{
+                left: 50%;
+                margin-left: -74px;
+            }
+            .timeline-content{
+                padding: 1rem 2.5rem 1rem 1rem;
+            }
+            &:nth-child(even){
+                .timeline-date{
+                    margin-left: -19px;
+                }
+                .timeline-content{
+                    padding: 1rem 1rem 1rem 2.5rem;
+                }
+            }
+        } 
+    }
+}

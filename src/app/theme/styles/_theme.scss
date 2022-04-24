@@ -1,0 +1,16 @@
+@use '@angular/material' as mat; 
+@include mat.core();
+
+@import 'theme-reset';
+.app{
+    &.blue-light{
+        @import "skins/blue-light";
+        @include mat.all-component-colors($blue-light-theme);
+        @include theme-reset($blue-light-theme);
+    }
+    &.blue-dark{
+        @import "skins/blue-dark";
+        @include mat.all-component-colors($blue-dark-theme);
+        @include theme-reset($blue-dark-theme);
+    }
+}

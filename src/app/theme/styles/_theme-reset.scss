@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import "variables";
+@mixin theme-reset($theme) {
+    $color-config:  mat.get-color-config($theme);
+    $primary:       map.get($color-config, 'primary');
+    $accent:        map.get($color-config, 'accent');
+    $warn:          map.get($color-config, 'warn'); 
+    $foreground:    map.get($color-config, 'foreground');
+    $background:    map.get($color-config, 'background');
+
+    .bg-primary { 
+        background: mat.get-color-from-palette($primary);
+        color: mat.get-color-from-palette($primary, default-contrast);
+    }
+    .primary-color{
+        color: mat.get-color-from-palette($primary);
+    }
+    .accent-color{
+        color: mat.get-color-from-palette($accent);
+    }
+    .secondary-text-color{
+        color: mat.get-color-from-palette($foreground, secondary-text);
+    }
+    .contact-icon{
+        color: mat.get-color-from-palette($accent);
+    }
+    .horizontal-menu{
+        background: mat.get-color-from-palette($primary, darker) !important;
+        .menu-item{
+            color: mat.get-color-from-palette($primary, lighter);
+        }
+    }
+    .active-link{
+        background-color: mat.get-color-from-palette($primary); 
+        color: #fff;
+    }
+    .lighter-color{
+        color: mat.get-color-from-palette($primary, lighter);
+    }
+    .profile-picture{
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid mat.get-color-from-palette($accent, darker);
+    }
+    mat-card {
+        border-top: 4px solid mat.get-color-from-palette($primary);
+    }
+    .timeline-container{
+        .timeline-content{
+            border-top: 4px solid mat.get-color-from-palette($accent);
+            &.first{
+                border-top: 4px solid mat.get-color-from-palette($primary);
+            }
+        }
+        &::before{
+            background: mat.get-color-from-palette($foreground, divider);
+        }
+    }
+}
