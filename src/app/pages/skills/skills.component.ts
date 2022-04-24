@@ -14,7 +14,7 @@ export class SkillsComponent {
       items: [
         {
           name: 'Angular',
-          value: 90
+          value: 80
         },
         {
           name: 'HTML',
@@ -22,11 +22,11 @@ export class SkillsComponent {
         },
         {
           name: 'CSS/SCSS',
-          value: 80
+          value:70
         },
         {
           name: 'Typescript',
-          value: 90
+          value: 80
         }
       ]
     },
@@ -69,7 +69,7 @@ export class SkillsComponent {
       items: [
         {
           name: 'Nrwl/NX monorepos',
-          value: 90
+          value: 85
         },
         {
           name: 'Docker',
