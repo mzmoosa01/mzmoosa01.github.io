@@ -1,0 +1,117 @@
+<app-header [data]="headerData"></app-header>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div fxFlex="100" fxFlex.gt-md="85" fxFlex.md="90">
+    <div fxLayout="row wrap" fxLayoutAlign="center">
+      <div fxFlex="100" fxFlex.gt-xs="50" class="p-3">
+        <mat-card class="contact-form">
+          <h2 class="secondary-text-color title">Send me an email</h2>
+          <form
+            [formGroup]="contactForm"
+            (ngSubmit)="onContactFormSubmit()"
+            fxLayout="row wrap"
+          >
+            <div fxFlex="100" class="mt-2">
+              <mat-form-field class="w-100">
+                <input
+                  matInput
+                  placeholder="Name"
+                  formControlName="name"
+                  required
+                />
+                <mat-error
+                  *ngIf="contactForm.controls['name'].errors?.['required']"
+                  >Name is required</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div fxFlex="100" class="mt-2">
+              <mat-form-field class="w-100">
+                <input
+                  matInput
+                  placeholder="Email"
+                  formControlName="email"
+                  required
+                />
+                <mat-error
+                  *ngIf="contactForm.controls['email'].errors?.['required']"
+                  >Email is required</mat-error
+                >
+                <mat-error
+                  *ngIf="contactForm.controls['email'].errors?.['email']"
+                  >Invalid email address</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div fxFlex="100" class="mt-2">
+              <mat-form-field class="w-100">
+                <textarea
+                  matInput
+                  placeholder="Message"
+                  formControlName="message"
+                  required
+                  rows="5"
+                >
+                </textarea>
+                <mat-error
+                  *ngIf="contactForm.controls['message'].errors?.['required']"
+                  >Message is required</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div class="w-100 py-4 text-center">
+              <button
+                mat-raised-button
+                color="accent"
+                type="submit"
+                class="send"
+                [class.spinner]="loading"
+                [disabled]="loading"
+              >
+                <mat-icon class="mr-2">send</mat-icon>Send
+              </button>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+      <div fxFlex="100" fxFlex.gt-xs="50" class="p-3">
+        <mat-card class="p-0">
+          <div class="secondary-text-color p-4">
+            <div fxLayout="row" class="py-2">
+              <mat-icon class="mr-2">mail_outline</mat-icon>
+              <i>mzmoosa01@gmail.com</i>
+            </div>
+            <div fxLayout="row" class="py-2">
+              <mat-icon class="mr-2">call</mat-icon>
+              <i>+27 73 337 1319</i>
+            </div>
+            <div fxLayout="row" class="py-2">
+              <svg
+                class="mat-icon mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+              <i><a href="https://github.com/mzmoosa01">Github</a></i>
+            </div>
+            <div fxLayout="row" class="py-2">
+              <svg class="mat-icon mr-2" viewBox="0 0 24 24">
+                <path
+                  d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z"
+                />
+              </svg>
+              <i
+                ><a href="https://www.linkedin.com/in/mohammed-zubair-moosa/"
+                  >LinkedIn</a
+                ></i
+              >
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

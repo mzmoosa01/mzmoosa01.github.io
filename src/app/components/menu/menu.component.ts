@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
     // { title: 'clients', routerLink: '/clients', icon: 'thumbs_up_down' },   
     // { title: 'pricing', routerLink: '/pricing', icon: 'attach_money' },    
     // { title: 'team', routerLink: '/team', icon: 'group' },
-    // { title: 'contact', routerLink: '/contact', icon: 'mail' }
+    { title: 'contact', routerLink: '/contact', icon: 'mail' }
   ]
   public settings = SETTINGS;
 
