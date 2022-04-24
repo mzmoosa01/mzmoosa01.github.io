@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mzmoosa01.github.io';
+  public skin = 'blue-dark';
+  public darkMode = true;
+
+  public toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+  }
 }

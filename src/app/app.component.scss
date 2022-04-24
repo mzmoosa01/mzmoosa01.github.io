@@ -1,0 +1,34 @@
+@import "./theme/styles/variables";
+
+.toggle-container {
+    position: absolute;
+    bottom: 0px;
+    // margin-top: 10px;
+}
+
+.wrapper {
+    min-height: calc(100vh - $toolbar-height + 10px);
+    margin-bottom: 10px;
+}
+
+.horizontal-menu{
+    position: fixed;
+    height: $toolbar-height;
+    z-index: 9;
+}
+.mat-drawer-container{
+    min-height: 100%;
+    height: auto!important;
+    padding-top: $toolbar-height;
+}
+.mat-drawer{
+    top: $toolbar-height;
+}
+.mat-drawer-content{
+    overflow:hidden !important;
+}
+.sidenav{
+    width: $sidenav-width;
+    position: fixed;
+    overflow: hidden;
+}

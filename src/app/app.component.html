@@ -1,10 +1,8 @@
-<div id="app" class="app h-100 blue-dark">
-  <!-- <mat-toolbar color="primary" class="horizontal-menu">
-    <div class="w-100 pr-5 pl-5">
-      <app-menu></app-menu>
-    </div>
-  </mat-toolbar>
-  <router-outlet></router-outlet> -->
+<div
+  id="app"
+  class="app h-100"
+  [ngClass]="{ 'blue-dark': darkMode, 'blue-light': !darkMode }"
+>
   <mat-toolbar color="primary" class="horizontal-menu" ngClass.gt-sm="px-0">
     <div
       fxLayout="row"
@@ -29,7 +27,16 @@
       </div>
     </mat-drawer>
     <mat-drawer-content>
-      <router-outlet></router-outlet>
+      <div class="wrapper">
+        <router-outlet></router-outlet>
+        <div class="toggle-container">
+          <div class="toggle">
+            <mat-slide-toggle [checked]="true" (change)="toggleDarkMode()"
+              >Dark mode</mat-slide-toggle
+            >
+          </div>
+        </div>
+      </div>
     </mat-drawer-content>
   </mat-drawer-container>
 </div>

@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatFormFieldModule, 
     MatInputModule, 
     MatSnackBarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSlideToggleModule
   ]
 })
 export class SharedModule { }
