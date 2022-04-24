@@ -24,6 +24,13 @@
     <mat-drawer #drawer mode="over" class="sidenav" autoFocus="false">
       <div class="h-100">
         <app-menu></app-menu>
+        <div class="toggle-container">
+          <div class="toggle">
+            <mat-slide-toggle [checked]="true" (change)="toggleDarkMode()"
+              >Dark mode</mat-slide-toggle
+            >
+          </div>
+        </div>
       </div>
     </mat-drawer>
     <mat-drawer-content>
@@ -31,7 +38,11 @@
         <router-outlet></router-outlet>
         <div class="toggle-container">
           <div class="toggle">
-            <mat-slide-toggle [checked]="true" (change)="toggleDarkMode()"
+            <mat-slide-toggle
+              fxShow="false"
+              fxShow.gt-sm
+              [checked]="true"
+              (change)="toggleDarkMode()"
               >Dark mode</mat-slide-toggle
             >
           </div>
