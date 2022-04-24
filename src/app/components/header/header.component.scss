@@ -1,12 +1,6 @@
 .content-header{
     color: #fff;
     text-align: center;
-    // height: 200px;
-    img{
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-    }
     h1{
         font-size: 36px;
         font-weight: 400;
@@ -19,11 +13,6 @@
         text-align: center;
         margin: 0;
     }
-    // &.has-bg-image{
-    //     background-image: url("../../../assets/img/bg-img.png");
-    //     background-blend-mode: overlay;
-    //     background-size: 300px; 
-    // }
 }
 
 @media screen and (min-width: 960px) {    
