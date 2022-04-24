@@ -5,7 +5,6 @@ import { catchError, map, Observable } from "rxjs";
 @Injectable({providedIn: 'root'})
 export class MailService {
 
-    // private _mailApi = 'https://mailthis.to/mzmoosa01@gmail.com';
     private _mailApi = 'https://script.google.com/macros/s/AKfycbzkPZsrPYlnQQNTiCN-SSGjBaIyHj9Acli4ftGXFOqZp5Lq_ZFVPOXvfI-ZqTM87gfV/exec'
 
     public constructor(private readonly http: HttpClient){}
@@ -22,17 +21,4 @@ export class MailService {
               })
         )
     }
-
-    // public sendMail(input: {name: string, email: string, message: string}) {
-    //     return this.http.post(this._mailApi, input, {responseType: 'text'}).pipe(
-    //         map((response:any) => {
-    //             if (response) {
-    //               return response;
-    //             }
-    //           }),
-    //           catchError(err => {
-    //               throw err;
-    //           })
-    //     )
-    // }
 }
