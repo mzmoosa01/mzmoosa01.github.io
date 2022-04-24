@@ -1,8 +1,35 @@
 <div id="app" class="app h-100 blue-dark">
-  <mat-toolbar color="primary" class="horizontal-menu">
+  <!-- <mat-toolbar color="primary" class="horizontal-menu">
     <div class="w-100 pr-5 pl-5">
       <app-menu></app-menu>
     </div>
   </mat-toolbar>
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet> -->
+  <mat-toolbar color="primary" class="horizontal-menu" ngClass.gt-sm="px-0">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      fxHide="false"
+      fxHide.gt-sm
+      class="w-100"
+    >
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="person-name">Zubair Moosa</span>
+    </div>
+    <div fxShow="false" fxShow.gt-sm class="container">
+      <app-menu></app-menu>
+    </div>
+  </mat-toolbar>
+  <mat-drawer-container>
+    <mat-drawer #drawer mode="over" class="sidenav" autoFocus="false">
+      <div class="h-100">
+        <app-menu></app-menu>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>
