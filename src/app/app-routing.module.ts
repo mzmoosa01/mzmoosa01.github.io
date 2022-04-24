@@ -8,6 +8,9 @@ import { SkillsComponent } from './pages/skills/skills.component';
 
 const routes: Routes = [
   {
+    path: '', redirectTo: 'about'
+  },
+  {
     path: 'about', component: AboutComponent
   },
   {
