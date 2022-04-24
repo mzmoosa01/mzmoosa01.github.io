@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ImageLoaderComponent } from './components/image-loader/image-loader.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     EducationComponent,
     TimelineComponent,
     HeaderComponent,
-    ContactComponent
+    ContactComponent,
+    ImageLoaderComponent
   ],
   imports: [
     BrowserModule,

@@ -93,60 +93,6 @@ a {
     vertical-align: middle;
 }
 
-.pricing-tabs.mat-tab-group .mat-tab-header{
-    width: 320px;
-    margin: 0 auto;
-    border-bottom: none !important;
-    margin-bottom: 16px;
-}
-.pricing-card.mat-card{
-    padding: 0;
-    overflow: hidden;
-    .title{
-        text-transform: uppercase;
-        font-weight: 500;
-    }
-    .header{
-        min-height: 152px;
-        p.desc, small{
-            font-weight: 300;
-        }
-    }
-    .del{
-        text-decoration:line-through;
-    }
-   
-}
-
-
-/******* Responsive *******/
-// Extra small devices (xs)
-@media screen and (max-width: 599px) { 
-    .pricing-tabs.mat-tab-group .mat-tab-header{
-        width: 210px;
-    }  
-}
-
-// Small devices (sm)
-@media screen and (min-width: 600px) and (max-width: 959px) {
-  
-}
-
-// Medium devices (md)
-@media screen and (min-width: 960px) and (max-width: 1279px) {    
- 
-}
-
-// Large devices (lg)
-@media screen and (min-width: 1280px) and (max-width: 1919px) { 
-
-}
-
-// Extra large devices (xl)
-@media screen and (min-width: 1920px) and (max-width: 5000px){
-
-}
-
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;

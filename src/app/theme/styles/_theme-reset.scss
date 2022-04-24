@@ -13,14 +13,6 @@
         background: mat.get-color-from-palette($primary);
         color: mat.get-color-from-palette($primary, default-contrast);
     }
-    .bg-accent {
-        background: mat.get-color-from-palette($accent);
-        color: mat.get-color-from-palette($accent, default-contrast);
-    }
-    .bg-warn {
-        background: mat.get-color-from-palette($warn);
-        color: mat.get-color-from-palette($warn, default-contrast);
-    }
     .primary-color{
         color: mat.get-color-from-palette($primary);
     }
@@ -30,11 +22,8 @@
     .secondary-text-color{
         color: mat.get-color-from-palette($foreground, secondary-text);
     }
-    .social-icon{
-        color: mat.get-color-from-palette($accent, 300);
-        &:hover{
-           color: mat.get-color-from-palette($accent, 700); 
-        }
+    .contact-icon{
+        color: mat.get-color-from-palette($accent);
     }
     .horizontal-menu{
         background: mat.get-color-from-palette($primary, darker) !important;
@@ -42,11 +31,6 @@
             color: mat.get-color-from-palette($primary, lighter);
         }
     }
-    .service-item:hover{
-        .mat-icon{
-            color: mat.get-color-from-palette($primary) !important;
-        }
-    } 
     .active-link{
         background-color: mat.get-color-from-palette($primary); 
         color: #fff;
@@ -54,8 +38,14 @@
     .lighter-color{
         color: mat.get-color-from-palette($primary, lighter);
     }
-    .content-header img{
-        border: 3px solid mat.get-color-from-palette($primary, darker);
+    .profile-picture{
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid mat.get-color-from-palette($accent, darker);
+    }
+    mat-card {
+        border-top: 4px solid mat.get-color-from-palette($primary);
     }
     .timeline-container{
         .timeline-content{
@@ -68,21 +58,4 @@
             background: mat.get-color-from-palette($foreground, divider);
         }
     }
-    .testimonials.swiper-container .item, 
-    .statistics .item,
-    .pricing-card {
-        border-top: 4px solid mat.get-color-from-palette($accent);        
-    }
-    .interests{
-        border-top: 4px solid mat.get-color-from-palette($primary); 
-    }
-    .ps__thumb-y{
-        background-color: mat.get-color-from-palette($primary);
-    }
-    .swiper-pagination.white .swiper-pagination-bullet{
-        background: mat.get-color-from-palette($accent);
-    }  
-    .footer{
-        border-top: 1px solid mat.get-color-from-palette($foreground, divider);
-    }  
 }

@@ -1,0 +1,2 @@
+<mat-spinner *ngIf="!loaded"></mat-spinner>
+<img [hidden]="!loaded" (load)="loaded = true" [src]="src" class="transition" [class.d-block]="loaded" [ngClass]="class"/>
