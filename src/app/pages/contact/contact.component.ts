@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HeaderData } from 'src/app/models/header-data.model';
 import { MailService } from 'src/app/services/mail.service';
@@ -15,14 +15,14 @@ export class ContactComponent {
     title: 'Contact'
   }
 
-  public contactForm: FormGroup;
-  public name: FormControl = new FormControl("", [Validators.required]);
-  public email: FormControl = new FormControl("", [Validators.required, Validators.email]);
-  public message: FormControl = new FormControl("", [Validators.required, Validators.maxLength(256)]);
-  public honeypot: FormControl = new FormControl("");
+  public contactForm: UntypedFormGroup;
+  public name: UntypedFormControl = new UntypedFormControl("", [Validators.required]);
+  public email: UntypedFormControl = new UntypedFormControl("", [Validators.required, Validators.email]);
+  public message: UntypedFormControl = new UntypedFormControl("", [Validators.required, Validators.maxLength(256)]);
+  public honeypot: UntypedFormControl = new UntypedFormControl("");
   public loading = false;
 
-  public constructor(private readonly formBuilder: FormBuilder, private readonly mailService: MailService, private readonly snackbar: MatSnackBar) {
+  public constructor(private readonly formBuilder: UntypedFormBuilder, private readonly mailService: MailService, private readonly snackbar: MatSnackBar) {
     this.contactForm = this.formBuilder.group({
       name: this.name,
       email: this.email,
